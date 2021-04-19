@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Shoe Store</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_textView">Shoe Store</string>
+    <string name="login_image_displayed">Login Image</string>
+    <string name="email_address_hint">Email Address</string>
+    <string name="login_password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome">Welcome to Shoe Store</string>
+    <string name="about_the_app">Amazing app to check the store inventory and you add new shoes to the stock. Enjoy!</string>
+    <string name="warehouse_button">Warehouse</string>
+    <string name="add_shoe_button">Add New Model</string>
+    <string name="add_new_shoe_flot_button">add new shoe button</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="description">Description</string>
+    <string name="add_shoes_btn">Add New Shoes</string>
+    <string name="jordan_image">jordan shoes</string>
+</resources>
