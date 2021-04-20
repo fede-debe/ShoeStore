@@ -1,42 +1,44 @@
 package com.udacity.shoestore.shoesList
 
-
-import android.widget.LinearLayout
+import androidx.databinding.Bindable
+import androidx.databinding.Observable
+import androidx.databinding.PropertyChangeRegistry
+import androidx.databinding.library.baseAdapters.BR
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.udacity.shoestore.models.Shoe
 
-class ShoesListSharedViewModel: ViewModel() {
+class ShoesListSharedViewModel: ViewModel(), Observable {
+    private val propertyChangeRegistry = PropertyChangeRegistry()
 
+    private val shoes = MutableLiveData<MutableList<Shoe>>(mutableListOf())
 
-    private val _name = MutableLiveData<String>()
-    val name: LiveData<String>
-    get() = _name
+    @Bindable
+    var shoe = Shoe()
+        set(value) {
+            if(value != field){
+                field = value
+                propertyChangeRegistry.notifyChange(this, BR.shoe)
 
-    private val _size = MutableLiveData<String>()
-    val size: LiveData<String>
-    get() = _size
-
-    private val _company = MutableLiveData<String>()
-    val company: LiveData<String>
-    get() = _company
-
-    private val _description = MutableLiveData<String>()
-    val description: LiveData<String>
-    get() = _description
-
-
-    fun addNewShoeToWarehouse(newName: String, newSize: String, newCompany: String, newDescription: String){
-        _name.value = newName
-        _size.value = newSize
-        _company.value = newCompany
-        _description.value = newDescription
-
+        }
     }
 
+    fun getNewShoeLiveData(): LiveData<MutableList<Shoe>> = shoes
 
+    fun addNewShoe(item: Shoe?){
+        item?.let {
+            shoes.value?.add(item)
+        }
+    }
 
+    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+        propertyChangeRegistry.add(callback)
+    }
 
+    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+        propertyChangeRegistry.remove(callback)
+    }
 
 
 }

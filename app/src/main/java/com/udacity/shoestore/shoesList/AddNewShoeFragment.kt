@@ -12,6 +12,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentAddNewShoeBinding
+import com.udacity.shoestore.models.Shoe
 
 class AddNewShoeFragment : Fragment() {
 
@@ -24,31 +25,13 @@ class AddNewShoeFragment : Fragment() {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_new_shoe, container, false)
 
+        binding.lifecycleOwner = this
+        binding.shoesListSharedViewModel = sharedViewModel
+        binding.shoe = Shoe()
 
-        sharedViewModel.name.observe(viewLifecycleOwner, Observer { newName ->
-            binding.shoesName.setText(newName)
-        })
-
-        sharedViewModel.size.observe(viewLifecycleOwner, Observer{ newSize ->
-            binding.shoesSize.setText(newSize)
-        })
-
-        sharedViewModel.company.observe(viewLifecycleOwner, Observer { newCompany ->
-            binding.shoesCompany.setText(newCompany)
-        })
-
-        sharedViewModel.description.observe(viewLifecycleOwner, Observer { newDescription ->
-            binding.shoesDescription.setText(newDescription)
-        })
 
         binding.buttonAddNewShoes.setOnClickListener{
-
-            sharedViewModel.addNewShoeToWarehouse(
-                binding.shoesName.text.toString(),
-                binding.shoesSize.text.toString(),
-                binding.shoesCompany.text.toString(),
-                binding.shoesDescription.text.toString())
-
+            sharedViewModel.addNewShoe(sharedViewModel.shoe)
             findNavController().navigate(AddNewShoeFragmentDirections.actionAddNewShoeFragmentToShoesListFragment())
         }
 
