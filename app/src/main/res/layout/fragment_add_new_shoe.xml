@@ -35,7 +35,8 @@
             android:id="@+id/shoesName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/shoe_name" />
+            android:hint="@string/shoe_name"
+            android:maxLength="20"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -52,7 +53,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/size"
-            app:textInputLayoutFocusedRectEnabled="false" />
+            app:textInputLayoutFocusedRectEnabled="false"
+            android:maxLength="15"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -68,7 +70,8 @@
             android:id="@+id/shoesCompany"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/company" />
+            android:hint="@string/company"
+            android:maxLength="15"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -84,7 +87,8 @@
             android:id="@+id/shoesDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/description" />
+            android:hint="@string/description"
+            android:maxLength="30"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
