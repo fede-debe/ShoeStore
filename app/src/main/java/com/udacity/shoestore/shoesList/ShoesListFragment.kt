@@ -2,14 +2,14 @@ package com.udacity.shoestore.shoesList
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesListBinding
 import com.udacity.shoestore.databinding.NewShoesObjectBinding
@@ -38,7 +38,18 @@ class ShoesListFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_shoesListFragment_to_addNewShoeFragment)
 
         )
+        setHasOptionsMenu(true)
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.logout_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
+                || super.onOptionsItemSelected(item)
     }
 
     private fun displayListOfShoes(shoes: List<Shoe>) {
@@ -53,20 +64,16 @@ class ShoesListFragment : Fragment() {
             tvSize.text = shoe.size
             tvCompany.text = shoe.company
             tvDescription.text = shoe.description
-            ibDeleteShoe.setOnClickListener { onDeleteShoe(it) }
+            ibDeleteShoe.setOnClickListener { onDeleteShoe(it, shoe) }
 
         }
         binding.shoesListLayout.addView(shoeBinding.root)
-
     }
 
-    private fun onDeleteShoe(view: View) {
+    private fun onDeleteShoe(view: View, shoe: Shoe) {
         val parentLinearLayout = binding.shoesListLayout
         parentLinearLayout.removeView(view.parent as View)
+        sharedViewModel.deleteItem(shoe)
     }
-
-
-
-
 }
 

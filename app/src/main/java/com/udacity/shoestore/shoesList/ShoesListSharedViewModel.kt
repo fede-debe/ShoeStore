@@ -9,6 +9,8 @@ class ShoesListSharedViewModel: ViewModel() {
 
 
     var currentShoe: Shoe? = null
+    val item: Shoe? = null
+
 
     private val _shoes = MutableLiveData<MutableList<Shoe>>()
     val shoes: LiveData<MutableList<Shoe>>
@@ -43,9 +45,8 @@ class ShoesListSharedViewModel: ViewModel() {
         _eventCloseScreen.value = true
     }
 
-
-
-
-
+    fun deleteItem(item: Shoe){
+        _shoes.value?.remove(item)
+    }
 
 }
