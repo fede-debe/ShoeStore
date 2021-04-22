@@ -9,12 +9,13 @@
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="welcome">Welcome to Shoe Store</string>
-    <string name="about_the_app">Amazing app to check the store inventory and you add new shoes to the stock. Enjoy!</string>
+    <string name="about_the_app">Amazing app to create an inventory for your store. Provide few details and with a simple click, you can add a new pair of shoes inside your stock.
+ Enjoy!</string>
     <string name="warehouse_button">Warehouse</string>
     <string name="add_shoe_button">Add New Model</string>
     <string name="add_new_shoe_flot_button">add new shoe button</string>
     <string name="shoe_name">Shoe Name</string>
-    <string name="size">Size</string>
+    <string name="size">Size:</string>
     <string name="company">Company</string>
     <string name="description">Description</string>
     <string name="add_shoes_btn">Add New Shoes</string>
@@ -25,4 +26,8 @@
     <string name="size_of_the_shoes">Size of the shoes</string>
     <string name="company_of_the_shoes">Company of the shoes</string>
     <string name="description_of_the_shoes">Description of the shoes</string>
+    <string name="name">Name:</string>
+    <string name="brand">Brand:</string>
+    <string name="style">Style:</string>
+    <string name="image_delete">image delete</string>
 </resources>

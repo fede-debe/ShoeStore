@@ -7,9 +7,6 @@
         <variable
             name="shoesListSharedViewModel"
             type="com.udacity.shoestore.shoesList.ShoesListSharedViewModel" />
-        <variable
-            name="shoe"
-            type="com.udacity.shoestore.models.Shoe" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,8 +40,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/shoe_name"
-            android:text="@={shoesListSharedViewModel.shoe.name}"
-            android:maxLength="20"/>
+            android:text="@={shoesListSharedViewModel.currentShoe.name}"
+            android:maxLength="15"
+            android:inputType="textCapCharacters"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -61,8 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/size"
-            android:text="@={shoesListSharedViewModel.shoe.size}"
-            android:maxLength="15"/>
+            android:text="@={shoesListSharedViewModel.currentShoe.size}"
+            android:maxLength="15"
+            android:inputType="textCapCharacters"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -79,8 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/company"
-            android:text="@={shoesListSharedViewModel.shoe.company}"
-            android:maxLength="15"/>
+            android:text="@={shoesListSharedViewModel.currentShoe.company}"
+            android:maxLength="15"
+            android:inputType="textCapCharacters"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -97,8 +97,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/description"
-            android:text="@={shoesListSharedViewModel.shoe.description}"
-            android:maxLength="30"/>
+            android:text="@={shoesListSharedViewModel.currentShoe.description}"
+            android:maxLength="16"
+            android:inputType="textCapCharacters"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -109,6 +110,7 @@
         android:layout_marginTop="16dp"
         android:elevation="5dp"
         android:text="@string/add_shoes_btn"
+        android:onClick="@{ () -> shoesListSharedViewModel.saveItem() }"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

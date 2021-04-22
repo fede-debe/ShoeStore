@@ -17,25 +17,26 @@ import com.udacity.shoestore.models.Shoe
 class AddNewShoeFragment : Fragment() {
 
     private val sharedViewModel: ShoesListSharedViewModel by activityViewModels()
-
     private lateinit var binding: FragmentAddNewShoeBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_add_new_shoe, container, false)
+        binding = FragmentAddNewShoeBinding.inflate(inflater, container, false)
 
-        binding.lifecycleOwner = this
         binding.shoesListSharedViewModel = sharedViewModel
-        binding.shoe = Shoe()
+        sharedViewModel.createNewShoeObject()
 
+        sharedViewModel.eventCloseScreen.observe(viewLifecycleOwner, Observer { close ->
+            close?.let {
+                if (it) {
+                    findNavController().navigateUp()
+                    sharedViewModel.onEventCloseComplete()
+                }
+            }
+        })
 
-        binding.buttonAddNewShoes.setOnClickListener{
-            sharedViewModel.addNewShoe(sharedViewModel.shoe)
-            findNavController().navigate(AddNewShoeFragmentDirections.actionAddNewShoeFragmentToShoesListFragment())
-        }
 
         return binding.root
     }
-
 }

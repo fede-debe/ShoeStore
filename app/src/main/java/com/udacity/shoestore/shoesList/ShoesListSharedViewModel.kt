@@ -1,44 +1,51 @@
 package com.udacity.shoestore.shoesList
 
-import androidx.databinding.Bindable
-import androidx.databinding.Observable
-import androidx.databinding.PropertyChangeRegistry
-import androidx.databinding.library.baseAdapters.BR
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
 
-class ShoesListSharedViewModel: ViewModel(), Observable {
-    private val propertyChangeRegistry = PropertyChangeRegistry()
+class ShoesListSharedViewModel: ViewModel() {
 
-    private val shoes = MutableLiveData<MutableList<Shoe>>(mutableListOf())
 
-    @Bindable
-    var shoe = Shoe()
-        set(value) {
-            if(value != field){
-                field = value
-                propertyChangeRegistry.notifyChange(this, BR.shoe)
+    var currentShoe: Shoe? = null
 
+    private val _shoes = MutableLiveData<MutableList<Shoe>>()
+    val shoes: LiveData<MutableList<Shoe>>
+        get() = _shoes
+
+
+    private val _eventCloseScreen = MutableLiveData<Boolean>()
+    val eventCloseScreen: LiveData<Boolean>
+        get() = _eventCloseScreen
+
+
+    fun createNewShoeObject(){
+        currentShoe = Shoe("", "", "", "")
+    }
+
+    fun onEventCloseComplete() {
+        _eventCloseScreen.value = false
+    }
+
+    fun saveItem(){
+        val listShoes = mutableListOf<Shoe>()
+
+        _shoes.value?.let {
+            listShoes.addAll(it)
         }
-    }
 
-    fun getNewShoeLiveData(): LiveData<MutableList<Shoe>> = shoes
-
-    fun addNewShoe(item: Shoe?){
-        item?.let {
-            shoes.value?.add(item)
+        currentShoe?.let {
+            listShoes.add(it)
         }
+
+        _shoes.value = listShoes
+        _eventCloseScreen.value = true
     }
 
-    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        propertyChangeRegistry.add(callback)
-    }
 
-    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
-        propertyChangeRegistry.remove(callback)
-    }
+
+
 
 
 }
