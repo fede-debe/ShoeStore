@@ -33,7 +33,6 @@ class ShoesListFragment : Fragment() {
             }
         })
 
-
         binding.floatingButtonAddNewModel.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_shoesListFragment_to_addNewShoeFragment)
 
@@ -51,6 +50,9 @@ class ShoesListFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
     }
+
+
+
 
     private fun displayListOfShoes(shoes: List<Shoe>) {
          shoes.forEach { displaySingleShoe(it) }

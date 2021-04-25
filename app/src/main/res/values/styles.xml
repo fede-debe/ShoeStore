@@ -23,4 +23,9 @@
         <item name="android:textColor">#2461F1</item>
     </style>
 
+    <style name="NoActionBar" parent="AppTheme">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

@@ -31,4 +31,8 @@
     <string name="style">Style:</string>
     <string name="image_delete">image delete</string>
     <string name="logout">Log Out</string>
+    <string name="rules">Rules</string>
+    <string name="about">About</string>
+    <string name="about_app">About the App</string>
+    <string name="about_text">This app is designed to help you organizing the warehouse. </string>
 </resources>
