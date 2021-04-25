@@ -34,5 +34,11 @@
     <string name="rules">Rules</string>
     <string name="about">About</string>
     <string name="about_app">About the App</string>
-    <string name="about_text">This app is designed to help you organizing the warehouse. </string>
+    <string name="about_text">This app is designed to help you organize the warehouse. Every time you get a new pair of shoes, you can easily add it to the list by passing a few specifics of it. This is the perfect app to organize your work and increase your sales by having everything stored and easy to find! Enjoy the Shoe Store app and get your job done!</string>
+    <string name="first_rule" >1. Provide an email and a password in order to create a profile and access to your warehouse</string>
+    <string name="second_rule" >2. Inside the Warehouse you need to press the blue button to add new shoes to the list</string>
+    <string name="third_rule">3. In order to add a new pair of shoes, you need to provide NAME, SIZE ( 43 EU, 9 US..), COMPANY, and DESCRIPTION (white/man/winter)</string>
+    <string name="forth_rule">4. You can always delete a pair from the list by pressing the red delete button on the side of each pair of shoes you added</string>
+    <string name="fifth_rule">5. On the top right of the Warehouse page you can find a Logout menu to go back to the Login page</string>
+
 </resources>

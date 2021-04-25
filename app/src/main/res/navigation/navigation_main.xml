@@ -44,10 +44,10 @@
     <fragment
         android:id="@+id/rulesFragment"
         android:name="com.udacity.shoestore.menuFragments.RulesFragment"
-        android:label="fragment_rules"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_rules" />
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.udacity.shoestore.menuFragments.AboutFragment"
-        android:label="fragment_about" />
+        android:label="@string/app_name" />
 </navigation>
