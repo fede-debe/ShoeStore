@@ -4,7 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_textView">Shoe Store</string>
     <string name="login_image_displayed">Login Image</string>
-    <string name="email_address_hint">Email Address</string>
+    <string name="username_address_hint">Username</string>
     <string name="login_password">Password</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
@@ -42,5 +42,6 @@
     <string name="fifth_rule">5. On the top right of the Warehouse page you can find a Logout menu to go back to the Login page</string>
     <string name="image_about">image about</string>
     <string name="boot_image">boot image</string>
+    <string name="shop_image">shop image</string>
 
 </resources>

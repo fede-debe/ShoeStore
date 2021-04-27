@@ -13,15 +13,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:background="#DFE2EA">
+        android:padding="@dimen/padding_layout"
+        android:background="@color/app_background">
 
 
         <ImageView
             android:id="@+id/imageViewRules"
-            android:layout_width="0dp"
-            android:layout_height="192dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="@dimen/layout_width_0"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_10"
+            android:contentDescription="@string/shop_image"
             android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
@@ -44,13 +45,11 @@
 
         <TextView
             android:id="@+id/first_rule"
-            android:layout_width="0dp"
+            style="@style/TextStyle"
+            android:layout_width="@dimen/layout_width_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/cabin_bold"
+            android:layout_marginTop="@dimen/layout_margin_16"
             android:text="@string/first_rule"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/border_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.517"
@@ -60,13 +59,11 @@
 
         <TextView
             android:id="@+id/second_rule"
-            android:layout_width="0dp"
+            style="@style/TextStyle"
+            android:layout_width="@dimen/layout_width_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/cabin_bold"
+            android:layout_marginTop="@dimen/layout_margin_16"
             android:text="@string/second_rule"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/border_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -76,13 +73,11 @@
 
         <TextView
             android:id="@+id/third_rule"
-            android:layout_width="0dp"
+            style="@style/TextStyle"
+            android:layout_width="@dimen/layout_width_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/cabin_bold"
+            android:layout_marginTop="@dimen/layout_margin_16"
             android:text="@string/third_rule"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/border_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -92,13 +87,11 @@
 
         <TextView
             android:id="@+id/forth_rule"
-            android:layout_width="0dp"
+            style="@style/TextStyle"
+            android:layout_width="@dimen/layout_width_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/cabin_bold"
+            android:layout_marginTop="@dimen/layout_margin_16"
             android:text="@string/forth_rule"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/border_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -108,20 +101,17 @@
 
         <TextView
             android:id="@+id/fifth_rule"
-            android:layout_width="0dp"
+            style="@style/TextStyle"
+            android:layout_width="@dimen/layout_width_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/cabin_bold"
+            android:layout_marginTop="@dimen/layout_margin_16"
             android:text="@string/fifth_rule"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/border_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/forth_rule"
             app:layout_constraintVertical_bias="0.0" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 </layout>

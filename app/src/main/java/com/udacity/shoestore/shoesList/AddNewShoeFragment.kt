@@ -1,20 +1,13 @@
 package com.udacity.shoestore.shoesList
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupWithNavController
-import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentAddNewShoeBinding
-import com.udacity.shoestore.models.Shoe
 
 class AddNewShoeFragment : Fragment() {
 
@@ -29,7 +22,7 @@ class AddNewShoeFragment : Fragment() {
         binding.shoesListSharedViewModel = sharedViewModel
         sharedViewModel.createNewShoeObject()
 
-        sharedViewModel.eventCloseScreen.observe(viewLifecycleOwner, Observer { close ->
+        sharedViewModel.eventCloseScreen.observe(viewLifecycleOwner, { close ->
             close?.let {
                 if (it) {
                     findNavController().navigateUp()
@@ -37,7 +30,6 @@ class AddNewShoeFragment : Fragment() {
                 }
             }
         })
-
 
         return binding.root
     }

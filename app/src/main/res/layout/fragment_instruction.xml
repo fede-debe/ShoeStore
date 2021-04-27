@@ -15,20 +15,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="15dp"
-    android:background="#DFE2EA">
+    android:padding="@dimen/padding_layout"
+    android:background="@color/app_background">
 
     <TextView
         android:id="@+id/welcome_text"
         style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/layout_margin_10"
         android:gravity="center"
-        android:padding="@dimen/layout_margin"
+        android:padding="@dimen/layout_margin_16"
         android:text="@string/welcome"
         android:textColor="@color/colorPrimary"
-        android:textSize="32sp"
+        android:textSize="@dimen/text_size_32"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="@dimen/layout_margin_58"
         android:contentDescription="@string/boot_image"
         android:src="@drawable/nav_header"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,18 +49,17 @@
 
     <TextView
         android:id="@+id/about_text"
+        style="@style/TextStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
-        android:fontFamily="@font/cabin_bold"
-        android:padding="13dp"
+        android:layout_marginTop="@dimen/layout_margin_58"
+        android:padding="@dimen/padding_10"
         android:text="@string/about_the_app"
-        android:textColor="#030101"
-        android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        />
 
     <Button
         android:id="@+id/warehouse_button"
@@ -68,7 +67,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/warehouse_button"
-        app:cornerRadius="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"

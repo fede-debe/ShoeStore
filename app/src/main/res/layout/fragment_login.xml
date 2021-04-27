@@ -14,16 +14,16 @@
     android:id="@+id/loginFragment"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="15dp"
-    android:background="#DFE2EA">
+    android:padding="@dimen/padding_layout"
+    android:background="@color/app_background">
 
     <ImageView
         android:id="@+id/login_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/layout_margin_10"
         android:contentDescription="@string/login_image_displayed"
-        android:padding="10dp"
+        android:padding="@dimen/padding_10"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_shoe_shop_blue"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,12 +36,10 @@
         style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/layout_margin_10"
         android:layout_weight="0"
-        android:padding="5dp"
         android:text="@string/title_textView"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
@@ -49,21 +47,21 @@
         app:layout_constraintTop_toBottomOf="@+id/login_image" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/enter_email_layout"
+        android:id="@+id/enter_username_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="@dimen/layout_margin_65"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/enter_email_text"
+            android:id="@+id/enter_username_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/email_address_hint"
+            android:hint="@string/username_address_hint"
             android:inputType="textEmailAddress"
-            android:textColor="#0B0404" />
+            android:textColor="@color/border_color" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -72,7 +70,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enter_email_layout">
+        app:layout_constraintTop_toBottomOf="@+id/enter_username_layout">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/enter_password_text"
@@ -80,7 +78,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/login_password"
             android:inputType="textPassword"
-            android:textColor="#060202" />
+            android:textColor="@color/border_color" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -89,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/layout_margin_40"
         android:fontFamily="@font/righteous"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,8 +105,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_button" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 </layout>

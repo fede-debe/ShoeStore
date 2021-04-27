@@ -7,19 +7,15 @@ import com.udacity.shoestore.models.Shoe
 
 class ShoesListSharedViewModel: ViewModel() {
 
-
     var currentShoe: Shoe? = null
-
 
     private val _shoes = MutableLiveData<MutableList<Shoe>>()
     val shoes: LiveData<MutableList<Shoe>>
         get() = _shoes
 
-
     private val _eventCloseScreen = MutableLiveData<Boolean>()
     val eventCloseScreen: LiveData<Boolean>
         get() = _eventCloseScreen
-
 
     fun createNewShoeObject(){
         currentShoe = Shoe("", "", "", "")

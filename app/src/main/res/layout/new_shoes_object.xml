@@ -13,16 +13,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_margin="10dp"
-    android:layout_marginBottom="@dimen/smallest_padding"
+    android:layout_margin="@dimen/layout_margin_10"
+    android:layout_marginBottom="@dimen/layout_margin_5"
     android:background="@drawable/view_borders">
 
     <ImageView
         android:id="@+id/newShoeImageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_width="@dimen/layout_wh_70"
+        android:layout_height="@dimen/layout_wh_70"
+        android:layout_marginStart="@dimen/layout_margin_10"
+        android:layout_marginTop="@dimen/layout_margin_5"
         android:contentDescription="@string/jordan_image"
         android:src="@drawable/ic_sneaker_image"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +34,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_margin="5dp"
+            android:layout_margin="@dimen/layout_margin_5"
             android:orientation="vertical">
 
             <LinearLayout
@@ -43,25 +43,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="2dp"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingEnd="@dimen/padding_2"
                     android:text="@string/name"
-                    android:textColor="#040506"
-                    android:textSize="13sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_13" />
 
                 <TextView
                     android:id="@+id/tv_name"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:hint="@string/name_of_the_shoes"
                     android:paddingStart="@dimen/smallest_padding"
                     android:paddingEnd="@dimen/smallest_padding"
-                    android:textColor="#040506"
-                    android:textSize="12sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_12" />
             </LinearLayout>
 
             <LinearLayout
@@ -70,25 +70,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="2dp"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingEnd="@dimen/padding_2"
                     android:text="@string/size"
-                    android:textColor="#040506"
-                    android:textSize="13sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_13" />
 
                 <TextView
                     android:id="@+id/tv_size"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:hint="@string/size_of_the_shoes"
                     android:paddingStart="@dimen/smallest_padding"
                     android:paddingEnd="@dimen/smallest_padding"
-                    android:textColor="#040506"
-                    android:textSize="12sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_12" />
             </LinearLayout>
 
             <LinearLayout
@@ -97,25 +97,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="2dp"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingEnd="@dimen/padding_2"
                     android:text="@string/brand"
-                    android:textColor="#040506"
-                    android:textSize="13sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_13" />
 
                 <TextView
                     android:id="@+id/tv_company"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:hint="@string/company_of_the_shoes"
                     android:paddingStart="@dimen/smallest_padding"
                     android:paddingEnd="@dimen/smallest_padding"
-                    android:textColor="#040506"
-                    android:textSize="12sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_12" />
             </LinearLayout>
 
             <LinearLayout
@@ -124,25 +124,25 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
-                    android:paddingStart="15dp"
-                    android:paddingEnd="2dp"
+                    android:paddingStart="@dimen/padding_15"
+                    android:paddingEnd="@dimen/padding_2"
                     android:text="@string/style"
-                    android:textColor="#040506"
-                    android:textSize="13sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_13" />
 
                 <TextView
                     android:id="@+id/tv_description"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/layout_width_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="4"
                     android:hint="@string/description_of_the_shoes"
                     android:paddingStart="@dimen/smallest_padding"
                     android:paddingEnd="@dimen/smallest_padding"
-                    android:textColor="#040506"
-                    android:textSize="12sp" />
+                    android:textColor="@color/border_color"
+                    android:textSize="@dimen/text_size_12" />
             </LinearLayout>
         </LinearLayout>
 
@@ -154,7 +154,7 @@
         android:layout_marginEnd="@dimen/small_padding"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/image_delete"
-        android:padding="3dp"
+        android:padding="@dimen/padding_2"
         android:src="@drawable/ic_delete_image" />
 </LinearLayout>
 </layout>

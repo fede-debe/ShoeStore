@@ -13,14 +13,14 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:background="#DFE2EA">
+        android:padding="@dimen/padding_layout"
+        android:background="@color/app_background">
 
         <ImageView
             android:id="@+id/imageViewAbout"
             android:layout_width="0dp"
-            android:layout_height="192dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_10"
             android:contentDescription="@string/image_about"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.551"
@@ -33,7 +33,7 @@
             style="@style/TitleStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/layout_margin_10"
             android:text="@string/about_app"
             android:textSize="@dimen/title_size"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,12 @@
 
         <TextView
             android:id="@+id/aboutAppText"
-            android:fontFamily="@font/cabin_bold"
-            android:layout_width="0dp"
+            style="@style/TextStyle"
+            android:layout_width="@dimen/layout_width_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/layout_margin_10"
+            android:layout_marginBottom="@dimen/layout_margin_10"
             android:text="@string/about_text"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/border_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.517"
