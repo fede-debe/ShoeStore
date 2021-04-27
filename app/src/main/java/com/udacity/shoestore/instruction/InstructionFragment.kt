@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.udacity.shoestore.R
@@ -17,6 +18,7 @@ import com.udacity.shoestore.databinding.FragmentInstructionBinding
 class InstructionFragment : Fragment() {
 
     private lateinit var binding: FragmentInstructionBinding
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

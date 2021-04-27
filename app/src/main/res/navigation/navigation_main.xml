@@ -11,18 +11,28 @@
         <action
             android:id="@+id/action_loginFragment_to_instructionFragment"
             app:destination="@id/instructionFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
+        android:label="{username}"
         android:name="com.udacity.shoestore.instruction.InstructionFragment"
         tools:layout="@layout/fragment_instruction">
         <action
             android:id="@+id/action_instructionFragment_to_shoesListFragment"
             app:destination="@id/shoesListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="username"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/shoesListFragment"
@@ -31,6 +41,9 @@
         <action
             android:id="@+id/action_shoesListFragment_to_addNewShoeFragment"
             app:destination="@id/addNewShoeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment

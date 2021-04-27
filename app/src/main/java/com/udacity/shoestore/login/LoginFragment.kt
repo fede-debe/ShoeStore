@@ -26,9 +26,12 @@ class LoginFragment : Fragment() {
     ): View {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
+
         binding.loginButton.setOnClickListener{
+
             if (binding.enterEmailText.text!!.isNotEmpty() && binding.enterPasswordText.text!!.isNotEmpty()){
-                val action = LoginFragmentDirections.actionLoginFragmentToInstructionFragment()
+                val username = binding.enterEmailText.text.toString()
+                val action = LoginFragmentDirections.actionLoginFragmentToInstructionFragment(username)
                 findNavController().navigate(action)
             }else {
                 Toast.makeText(context, "Enter Email and Password", Toast.LENGTH_SHORT).show()
@@ -37,7 +40,8 @@ class LoginFragment : Fragment() {
 
         binding.signUpButton.setOnClickListener {
             if (binding.enterEmailText.text!!.isNotEmpty() && binding.enterPasswordText.text!!.isNotEmpty()){
-                val action = LoginFragmentDirections.actionLoginFragmentToInstructionFragment()
+                val username = binding.enterEmailText.text.toString()
+                val action = LoginFragmentDirections.actionLoginFragmentToInstructionFragment(username)
                 findNavController().navigate(action)
             }else{
                 Toast.makeText(context, "Enter Email and Password", Toast.LENGTH_SHORT).show()
