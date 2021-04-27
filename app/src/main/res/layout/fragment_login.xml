@@ -5,22 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.login.LoginFragment">
 
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/loginFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="15dp">
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="#DFE2EA">
 
     <ImageView
         android:id="@+id/login_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="@string/login_image_displayed"
+        android:padding="10dp"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_shoe_shop_blue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,14 +36,15 @@
         style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="0"
         android:padding="5dp"
         android:text="@string/title_textView"
         android:textAlignment="center"
-        android:textColor="#453B3B"
+        android:textColor="@color/colorPrimary"
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_image" />
 
@@ -44,7 +52,7 @@
         android:id="@+id/enter_email_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="42dp"
+        android:layout_marginTop="65dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text">
@@ -54,26 +62,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email_address_hint"
-            android:textColor="#0B0404"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="#0B0404" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/enter_password_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_email_layout">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/add_name_shoes_text"
+            android:id="@+id/enter_password_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/login_password"
-            android:textColor="#060202"
-            android:inputType="textPassword"/>
+            android:inputType="textPassword"
+            android:textColor="#060202" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -86,6 +93,7 @@
         android:fontFamily="@font/righteous"
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enter_password_layout" />
 
@@ -102,4 +110,5 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 </layout>

@@ -10,6 +10,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentAddNewShoeBinding
 import com.udacity.shoestore.models.Shoe

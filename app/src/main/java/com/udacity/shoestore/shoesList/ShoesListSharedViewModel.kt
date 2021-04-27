@@ -9,7 +9,6 @@ class ShoesListSharedViewModel: ViewModel() {
 
 
     var currentShoe: Shoe? = null
-    val item: Shoe? = null
 
 
     private val _shoes = MutableLiveData<MutableList<Shoe>>()

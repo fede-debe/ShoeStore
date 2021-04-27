@@ -5,25 +5,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.instruction.InstructionFragment">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/instructionFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="15dp"
-    >
+    android:background="#DFE2EA">
 
     <TextView
         android:id="@+id/welcome_text"
         style="@style/TitleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:padding="@dimen/layout_margin"
         android:text="@string/welcome"
-        android:textColor="#453B3B"
-        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,9 +39,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/ic_converse_image"
+        android:layout_marginTop="58dp"
+        android:contentDescription="@string/boot_image"
+        android:src="@drawable/nav_header"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome_text" />
 
@@ -42,13 +51,14 @@
         android:id="@+id/about_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:fontFamily="@font/righteous"
+        android:layout_marginTop="58dp"
+        android:fontFamily="@font/cabin_bold"
         android:padding="13dp"
         android:text="@string/about_the_app"
-        android:textColor="#453B3B"
+        android:textColor="#030101"
         android:textSize="19sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -61,9 +71,11 @@
         app:cornerRadius="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/about_text" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>

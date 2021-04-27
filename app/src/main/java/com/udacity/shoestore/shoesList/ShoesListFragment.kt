@@ -4,12 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoesListBinding
 import com.udacity.shoestore.databinding.NewShoesObjectBinding
@@ -22,10 +26,14 @@ class ShoesListFragment : Fragment() {
     private lateinit var binding: FragmentShoesListBinding
     private lateinit var shoeBinding: NewShoesObjectBinding
 
+
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
 
        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoes_list, container, false)
+
+
 
         sharedViewModel.shoes.observe(viewLifecycleOwner, { items ->
             items?.let {
@@ -50,9 +58,6 @@ class ShoesListFragment : Fragment() {
         return NavigationUI.onNavDestinationSelected(item, requireView().findNavController())
                 || super.onOptionsItemSelected(item)
     }
-
-
-
 
     private fun displayListOfShoes(shoes: List<Shoe>) {
          shoes.forEach { displaySingleShoe(it) }

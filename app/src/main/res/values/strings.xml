@@ -40,5 +40,7 @@
     <string name="third_rule">3. In order to add a new pair of shoes, you need to provide NAME, SIZE ( 43 EU, 9 US..), COMPANY, and DESCRIPTION (white/man/winter)</string>
     <string name="forth_rule">4. You can always delete a pair from the list by pressing the red delete button on the side of each pair of shoes you added</string>
     <string name="fifth_rule">5. On the top right of the Warehouse page you can find a Logout menu to go back to the Login page</string>
+    <string name="image_about">image about</string>
+    <string name="boot_image">boot image</string>
 
 </resources>
