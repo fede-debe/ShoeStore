@@ -7,7 +7,7 @@
             name="shoesListSharedViewModel"
             type="com.udacity.shoestore.shoesList.ShoesListSharedViewModel" />
     </data>
-
+    <!-- Linear layout to wrap the views within the object -->
 <LinearLayout
     android:id="@+id/newShoeObjectLayout"
     android:layout_width="match_parent"

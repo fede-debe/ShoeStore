@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.instruction.InstructionFragment">
-
+    <!-- Constraint layout to have more freedom to set the Views on the screen -->
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/instructionFragment"
     android:layout_width="match_parent"

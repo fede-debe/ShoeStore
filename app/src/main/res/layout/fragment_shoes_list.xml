@@ -3,7 +3,7 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
+    <!-- Constraint layout to have more freedom to set the Views on the screen -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoesListFragment"
         android:layout_width="match_parent"
