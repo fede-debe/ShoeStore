@@ -9,14 +9,9 @@
             type="com.udacity.shoestore.shoesList.ShoesListSharedViewModel" />
     </data>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
-
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:padding="@dimen/padding_layout"
     android:background="@color/app_background">
 
@@ -123,5 +118,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/add_new_shoe_description_layout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 </layout>

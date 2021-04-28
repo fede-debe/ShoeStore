@@ -5,15 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.udacity.shoestore.login.LoginFragment">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
-
 <androidx.constraintlayout.widget.ConstraintLayout
     android:id="@+id/loginFragment"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:padding="@dimen/padding_layout"
     android:background="@color/app_background">
 
@@ -106,5 +101,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-        </ScrollView>
 </layout>
