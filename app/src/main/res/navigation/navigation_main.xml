@@ -14,6 +14,7 @@
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="false" />
     </fragment>
@@ -28,6 +29,7 @@
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@id/loginFragment"
             app:popUpToInclusive="false" />
         <argument
@@ -44,6 +46,7 @@
             app:enterAnim="@anim/fade_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_left"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
