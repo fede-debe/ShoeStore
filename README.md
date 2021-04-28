@@ -1,4 +1,3 @@
-![Screenshot_ShoeStore_10](https://user-images.githubusercontent.com/66374898/116420077-f31a7180-a83d-11eb-901f-d4806adf381a.jpeg)
 # ShoeStore 👞
 In this project, I will build your first Android application with Kotlin for the Nanodegree program! I will build a multi-screened Android application and implement a navigation file to take the user through the app.<hr>
 ## Quick look into the project 💻
