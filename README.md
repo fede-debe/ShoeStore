@@ -1,3 +1,4 @@
+![Screenshot_ShoeStore_10](https://user-images.githubusercontent.com/66374898/116420077-f31a7180-a83d-11eb-901f-d4806adf381a.jpeg)
 # ShoeStore 👞
 In this project, I will build your first Android application with Kotlin for the Nanodegree program! I will build a multi-screened Android application and implement a navigation file to take the user through the app.<hr>
 ## Quick look into the project 💻
@@ -19,5 +20,6 @@ This app provides a simple warehouse where the user can save and delete pairs of
 ![Screenshot_ShoeStore_4](https://user-images.githubusercontent.com/66374898/116391648-ba6b9f80-a81f-11eb-8d6f-b4929292c893.jpeg)<hr>
 ### Menu Drawer 🌐
 ![Screenshot_ShoeStore_5](https://user-images.githubusercontent.com/66374898/116391810-e555f380-a81f-11eb-86fb-91b6fb28f7c8.jpeg)
-![Screenshot_ShoeStore_6](https://user-images.githubusercontent.com/66374898/116391867-facb1d80-a81f-11eb-9dfb-e71ab358d3de.jpeg)
+![Screenshot_ShoeStore_10](https://user-images.githubusercontent.com/66374898/116420200-0dece600-a83e-11eb-81c5-8d93217ea18d.jpeg)
 ![Screenshot_ShoeStore_7](https://user-images.githubusercontent.com/66374898/116391918-10d8de00-a820-11eb-8fc2-ca538c24c767.jpeg)
+
